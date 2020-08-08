@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Helping Hand</title>
+       <link rel="stylesheet" type="text/css" href="HelpingHand.css" />
+       <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        
+
+</head> 
+<body onload ="showAlerts()">
+    
+  <div class="body-container">
+<div class = "box" id="introBox">
+    <img src = "https://i.pinimg.com/originals/f0/85/87/f085870c39a6197c1fd66f6e00e1a065.jpg" class="symbol">
+    <b><div class= "label" id="Label">Welcome to Helping Hand </div></b>
+     
+     <input class = "userNameBox" type="text" id="username" placeholder="Name">
+     <!--div class = "checkRow">
+         <input class = "give" id="giver" type="radio" value="Giver" name="user">
+         <label>Giver</label>
+     <input class = "taker" id="taker" type="radio" value = "Taker" name="user">
+     <label>Taker</label>
+     </div-->
+     <input type = "button" class = "submitButton" id="submit" value = "Sign In" onclick="SignIn()">
+     
+</div>
+<div class = "homepage" id="homePage">
+    
+    <div id="menuRow" class="menu">
+        <div id="feed" class="feedClass" onclick = "feed()">Feed</div>
+        <div id="createPost" class = "createPostClass" onclick = "createPost()">Create a Post</div>
+    <!--div id="userList" class="userListClass" onclick = "displayUsers()"> Show Takers </div-->
+    <div id="savePostList" class = "savePostListClass" onclick = "showSavedPostList()">Show Saved Posts</div>
+    <div id="yourPostList" class = "yourPostListClass" onclick = "showYourPostList()">Show Your Posts</div>
+    </div>
+    
+    <div id="post">
+        <div id="topRow">
+           <label id="name">Title:</label>
+            <input id="nameInput" type="text"> 
+        </div>
+        
+            <!--img src = "https://360livemedia.com/wp-content/uploads/2020/03/placeholder.png" id="image1" onclick = "document.getElementById('file1').click();"-->
+            <div class = "choiceRow">
+                <input class = "donation" id="donator" type="radio" value="Donor" name="category">
+                <label>Donor</label>
+            <input class = "security" id="secure" type="radio" value = "Security" name="category">
+            <label>Security</label>
+            <input class = "smallFavor" id="favor" type="radio" value = "Favor" name="category">
+            <label>Small Favor</label>
+            <input class = "request" id="requester" type="radio" value = "request" name="category">
+            <label>Help out a Friend</label>
+            </div>
+            <!--input type="checkbox" class="checkBoxClass" id="multipleUsers" name="numUsers" value="moreThanOne"-->
+            <!--label for="multipleUsers">Need more than 1 person</label-->
+            <!--input type="file" id="file1" accept="image/*" style = "display:none;"-->
+            <label id="description">Description:</label>
+        <textarea id="descriptionInput" type="text" class="descriptionInputClass"></textarea>
+        <input type="button" name="submit" id="submitButton" class="submitButtonClass" value="Post" onclick = "getPost()">
+        
+        </div>
+    
+            
+    </div>
+    
+</div>
+<!--div class = "map" id="map"></div-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB8ca3XCXxT1Wg4zHlNN2BkYVsRLXoH8Z4",
+    authDomain: "burbsdatabase.firebaseapp.com",
+    databaseURL: "https://burbsdatabase.firebaseio.com",
+    projectId: "burbsdatabase",
+    storageBucket: "burbsdatabase.appspot.com",
+    messagingSenderId: "1025850110533",
+    appId: "1:1025850110533:web:6fae9f3718f7bbe0a0692c",
+    measurementId: "G-P9CJHR07LL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  
+</body>
+
+<script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhplxrmgfB2hW8nH7rBiC-CvpqjEHvEEI&callback=initMap&libraries=geometry&v=weekly">
+    </script>
+<script src="HelpingHand.js"></script>
+</html>
