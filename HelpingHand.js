@@ -223,7 +223,7 @@ function withinEachOther(element)
         new google.maps.LatLng({lat:user2Lat, lng:user2Lng})//new google.maps.LatLng(user2Lat, user2Lng)
       );
     
-    if(distance <= 402.336)
+    if(distance <= 700)
     {
         return true;
     }
